@@ -1,0 +1,47 @@
+.material-button {  
+    position: relative;  
+    padding: 15px 30px;  
+    font-size: 16px;  
+    color: white;  
+    background-color: #28D979;  
+    border: none;  
+    border-radius: 4px;  
+    overflow: hidden;  
+    cursor: pointer;  
+}  
+
+.material-button::after {  
+    content: '';  
+    position: absolute;  
+    border-radius: 50%;  
+    background: rgba(255, 255, 255, 0.6); /* Цвет волны */  
+    transition: transform 0.5s ease, opacity 0.5s ease;  
+    opacity: 0;  
+}  
+
+.material-button:focus {  
+    outline: none;  
+}  
+
+.material-button:active::after {  
+    transform: scale(4); /* Размер волны */  
+    opacity: 1;  
+    transition: transform 0.5s ease, opacity 0.5s ease;  
+}  
+
+
+
+.wave {  
+    position: absolute;  
+    border-radius: 50%;  
+    background: rgba(255, 255, 255, 0.6);  
+    transform: scale(0);  
+    animation: wave-animation 0.5s linear;  
+}  
+
+@keyframes wave-animation {  
+    to {  
+        transform: scale(4);  
+        opacity: 0;  
+    }  
+}  
