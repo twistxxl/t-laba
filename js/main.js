@@ -6,9 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const textElements = document.querySelectorAll('.text'); 
 
 
-    // Загрузить данные из localStorage  
+
     textElements.forEach(el => {  
-        console.log(el);
         
         const key = el.getAttribute('data-key');  
         const savedData = localStorage.getItem(key);  
@@ -16,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
             el.textContent = savedData;  
         }  
 
-        // Добавить обработчик нажатия для редактирования текста  
+        //change text  
         el.addEventListener('dblclick', () => {  
             const currentText = el.textContent;  
             const input = document.createElement('input');  
@@ -24,12 +23,12 @@ document.addEventListener('DOMContentLoaded', () => {
             input.value = currentText;  
             input.style.width = '100%';  
 
-            // Замена текста на input  
+            //text ro input
             el.innerHTML = '';  
             el.appendChild(input);  
             input.focus();  
 
-            // При потере фокуса или нажатии Enter сохранить изменения  
+            //unfocus or enter to save  
             input.addEventListener('blur', save);  
             input.addEventListener('keypress', (e) => {  
                 if (e.key === 'Enter') {  
@@ -41,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const newData = input.value.trim();  
                 el.textContent = newData;  
 
-                // Сохранить данные в localStorage  
+                //save to local storage
                 localStorage.setItem(key, newData);  
             }  
         });  

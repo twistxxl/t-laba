@@ -6,13 +6,23 @@
     font-family: 'Poppins', sans-serif, monospace;
     
 }
-
+/*адаптировать под pdf */
 #app{
     display: grid;
-    grid-template-rows: 1fr 3fr 3fr;
+    /* grid-template-rows: 1fr 3fr 3fr; */
+    grid-template-areas: 'firstBlock' 'secondBlock' 'thirdBlock';
     gap: 20px;
-    max-width: 1200px;
+    max-width: 595px;
+    /* height: 842px; */
     margin: 0 auto;
+    background-color: pink;
+}
+.text {
+    cursor: pointer;
+}
+h1{
+    display: inline-block;
+
 }
 
 /*FIRST BLOCK*/
@@ -24,7 +34,8 @@
    gap: 10px;
    padding: 10px;
    max-height: max-content;
-   
+   height: auto;
+   grid-area: firstBlock;
 }
 
 #avatar {
@@ -58,17 +69,22 @@
 }  
 
 #helloText {  
-    grid-area: helloText;  
+    grid-area: helloText; 
+    font-size: 18px;
+    height: auto;
 }  
 #nameText {  
     grid-area: nameText;
-    font-size: 14px;  
+    font-size: 14px;
+    height: auto;
 }  
 
 #position {  
     grid-area: position;
     font-size: 12px;
-    color: #5C5C5C  
+    color: #5C5C5C;
+
+    height: auto;
 }
 #lenguages {
     grid-area: lenguages;
@@ -109,6 +125,7 @@
     gap: 20px;
     padding: 10px;
     height: auto;
+    grid-area: secondBlock;
 }
 
 #experience, #stack {
@@ -167,8 +184,8 @@
     grid-template-rows: 1fr 1fr 1fr;
     gap: 20px;
     padding: 15px 0 15px 0;
-    margin: 30px 10px 5px 10px;
     height: auto;
+    justify-items: center;
  }
  #jsStack, #noCode, #etc {
     display: grid;
@@ -179,7 +196,10 @@
     border-radius: 6px;
     height: auto;
     justify-items: center;
+    width: 76px;
+    text-align: center;
  }
+ #noCode, #etc {}
  .fixedDiv {
     background-color: black;
     color: white;
@@ -215,6 +235,7 @@
     grid-template-areas: "education interests" "education interests" "education contacts";
     gap: 20px;
     height: auto;
+    grid-area: thirdBlock;
 }
 #education {
     grid-area: education;
@@ -237,7 +258,7 @@
     background-color: #F0F0F0;
     padding: 12px;
     height: auto;
-    max-width: 100%
+    /* max-width: 100% */
 }
 #educationBlock {
     display: grid;
@@ -315,13 +336,13 @@
     color: #ffffff;
 }
 .interest {
-    font-size: 24px;
+    font-size: 10px;
     font-weight: 500;
     text-align: center;
     background-color: white;
     border-radius: 40px;
     max-width: max-content;
-    padding: 15px 10px;
+    padding: 4px 10px
     
 }
 .links {
