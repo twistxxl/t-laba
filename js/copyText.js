@@ -1,6 +1,5 @@
 
 
-
 const text  = document.getElementById('email');
 
 const textStyle = {  
@@ -11,6 +10,7 @@ const textStyle = {
 };  
 
 text.addEventListener('click', (e) => {
+    
     if(e.ctrlKey) {
         navigator.clipboard.writeText(text.textContent);
         

@@ -11,3 +11,6 @@
     font-size: 150%;
    transition: all 0.5s ease-in-out;
 }
+.switched {
+    fill: rgb(129, 0, 0);
+}

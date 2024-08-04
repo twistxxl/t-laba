@@ -1,50 +1,55 @@
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif, monospace;
-    
+
 }
+
 /*адаптировать под pdf */
-body{
+body {
     max-width: 595px;
     margin: 0 auto;
 }
-#app{
+
+#app {
     display: grid;
-    /* grid-template-rows: 1fr 3fr 3fr; */
     grid-template-areas: 'firstBlock' 'secondBlock' 'thirdBlock';
     gap: 20px;
     max-width: 595px;
-    /* height: 842px; */
     margin: 0 auto;
 }
+
 .text {
     cursor: pointer;
 }
-h1{
+
+h1 {
     display: inline-block;
 }
+
 .h1 {
     font-size: 14px;
     font-weight: 600;
     display: inline-block;
 }
-img{
+
+img {
     display: inline-block;
     cursor: pointer;
 }
+
 /*FIRST BLOCK*/
 
 #firstBlock {
-   display: grid;
-   grid-template-columns: 1fr 1fr 2fr;;
-   grid-template-areas: "img name lenguages";
-   gap: 10px;
-   max-height: max-content;
-   height: auto;
-   grid-area: firstBlock;
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    ;
+    grid-template-areas: "img name lenguages";
+    gap: 10px;
+    max-height: max-content;
+    height: auto;
+    grid-area: firstBlock;
 }
 
 #avatar {
@@ -52,13 +57,16 @@ img{
     max-width: 100%;
     height: auto;
 }
- #name, #lenguages {
+
+#name,
+#lenguages {
     border-radius: 25px;
     background-color: #F0F0F0;
     padding: 12px;
-    max-height: max-content;   
+    max-height: max-content;
     height: auto;
 }
+
 #img {
     grid-area: img;
     max-height: max-content;
@@ -66,75 +74,86 @@ img{
     align-content: end;
 }
 
-#name {  
-    grid-area: name;  
-    display: grid;  
-    grid-template-rows: 1fr; 
-    grid-template-areas:   
-        "helloText"  
-        "nameText"  
+#name {
+    grid-area: name;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        "helloText"
+        "nameText"
         "position";
     gap: 12px;
-}  
+}
 
-#helloText {  
-    grid-area: helloText; 
+#helloText {
+    grid-area: helloText;
     font-size: 10px;
     font-weight: 600;
     height: auto;
     display: inline-block;
-}  
-#nameText {  
+}
+
+#nameText {
     grid-area: nameText;
     font-size: 14px;
     font-weight: 700;
     height: auto;
     display: inline-block;
-}  
+}
 
-#position {  
+#position {
     grid-area: position;
     font-size: 12px;
     color: #5C5C5C;
     font-weight: 600;
     height: auto;
 }
+
 #lenguages {
     grid-area: lenguages;
     max-height: max-content;
     display: inline-block;
 }
+
 #lenguagesText {
     font-size: 14px;
     font-weight: 600;
     height: auto;
     display: inline-block;
 }
+
 .leng {
     font-size: 10px;
     font-weight: 600;
     display: inline-block;
 }
+
 #lenguagesBlock {
     display: grid;
     grid-template-rows: 1fr 1fr;
     gap: 15px;
     padding: 10px;
 }
+
 .progressBar {
     width: 100%;
     height: 11px;
     background-color: #28D979;
     border-radius: 3px;
 }
-#russian, #english, #italian {
+
+#russian,
+#english,
+#italian {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
 }
+
 #progressBarEnglish {
     width: 50%;
 }
+
 #progressBarItalian {
     width: 5%;
 }
@@ -152,7 +171,8 @@ img{
     grid-area: secondBlock;
 }
 
-#experience, #stack {
+#experience,
+#stack {
     border-radius: 25px;
     background-color: #F0F0F0;
     padding: 12px;
@@ -163,12 +183,14 @@ img{
     max-height: max-content;
     height: auto;
 }
-.date{
+
+.date {
     font-size: 8px;
     font-weight: 600;
 
 }
-.positionText{
+
+.positionText {
     font-size: 10px;
     font-weight: 600;
 }
@@ -177,11 +199,12 @@ img{
     grid-area: stack;
     height: auto;
 }
+
 #worksBlock {
     display: grid;
     grid-template-rows: 2fr 2fr 2fr;
     gap: 10px;
-    
+
 }
 
 .job {
@@ -194,39 +217,47 @@ img{
     gap: 8px;
     background-color: white;
 }
+
 #firstWork {
     background-color: #28D979;
     color: white;
 }
+
 .position {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 8px;
 }
+
 .regularText {
     font-size: 8px;
     font-weight: 300;
- } 
- .list {
+}
+
+.list {
     font-size: 10px;
- }
- .listItem{
+}
+
+.listItem {
     font-size: 8px;
     font-weight: 300;
- }
+}
 
- #stackBlock {
+#stackBlock {
     display: grid;
-    grid-template-areas: 
-    "jsStack"
-    "noCode"
-    "etc";
+    grid-template-areas:
+        "jsStack"
+        "noCode"
+        "etc";
     gap: 20px;
     padding: 15px 0 auto 0;
     height: auto;
     justify-items: center;
- }
- #jsStack, #noCode, #etc {
+}
+
+#jsStack,
+#noCode,
+#etc {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 16px;
@@ -237,20 +268,23 @@ img{
     justify-items: center;
     width: 76px;
     text-align: center;
- }
- #jsStack{
+}
+
+#jsStack {
     grid-area: jsStack;
- }
- #noCode {
+}
+
+#noCode {
     grid-area: noCode;
- }
- #etc {
+}
+
+#etc {
     grid-area: etc;
- }
+}
 
 
 
- 
+
 
 
 
@@ -258,113 +292,127 @@ img{
 
 #thirdBlock {
     display: grid;
-    /* grid-template-columns: 2fr 2fr;
-    grid-template-rows: 2fr 1fr; */
-    grid-template-areas: 
-    "education interests" 
-    "education contacts";
+    grid-template-areas:
+        "education interests"
+        "education contacts";
     gap: 20px;
     height: auto;
     grid-area: thirdBlock;
 }
+
 #education {
     grid-area: education;
-   
+
 }
+
 #interests {
     grid-area: interests;
-    
+
 }
+
 #contacts {
     grid-area: contacts;
-    
+
 }
-#Date-1, #Date-2, #Date-3 {
+
+#Date-1,
+#Date-2,
+#Date-3 {
     font-size: 10px;
     font-weight: 600;
     display: inline-block;
 }
+
 .direction {
     font-size: 10px;
-    font-weight: 600; 
+    font-weight: 600;
     display: inline-block;
 }
 
 
-#education, #interests, #contacts {
+#education,
+#interests,
+#contacts {
     border-radius: 25px;
     background-color: #F0F0F0;
     padding: 12px;
     height: auto;
-    /* max-width: 100% */
 }
+
 #educationBlock {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr ;
+    grid-template-rows: 1fr 1fr;
     gap: 10px;
     padding: 10px;
-
 }
+
 #interestsBlock {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    /* grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;  */
     gap: 10px;
     padding: 10px;
     height: auto;
 }
+
 /* */
-#contacts{
+#contacts {
     grid-column-end: 3;
     background-color: black;
     color: white;
 }
+
 #firstEducation {
     background-color: #28D979;
     color: white;
     padding: 8px;
     border-radius: 10px;
     display: grid;
-    grid-template-areas: "Date" "Body" "Footer" ;
+    grid-template-areas: "Date" "Body" "Footer";
     gap: 8px;
     align-content: space-between;
     height: auto;
 }
-#secondEducation, #thirdEducation, #fourthEducation {
+
+#secondEducation,
+#thirdEducation,
+#fourthEducation {
     background-color: white;
     padding: 8px;
     border-radius: 10px;
     display: grid;
-    grid-template-areas: "Date" "Body" "Footer" ;
+    grid-template-areas: "Date" "Body" "Footer";
     gap: 8px;
     align-content: center;
-    
     height: auto;
 }
-.headerEducationContainer{
+
+.headerEducationContainer {
     display: grid;
     grid-template-columns: 1fr auto;
     gap: 8px;
     grid-area: Date;
 }
-.bodyEducationContainer{
+
+.bodyEducationContainer {
     display: grid;
     grid-template-columns: 1fr;
     gap: 8px;
     grid-area: Body;
 }
-.footerEducationContainer{
+
+.footerEducationContainer {
     grid-row-end: 4;
     grid-area: Footer;
     font-size: 8px;
     font-weight: 300;
 }
+
 #tagsGreen {
     color: #ffffff;
 }
+
 .tags {
     font-size: 8px;
     font-weight: 300;
@@ -379,13 +427,14 @@ img{
     border-radius: 40px;
     max-width: max-content;
     padding: 4px 10px
-    
 }
-#contactsHeader{
+
+#contactsHeader {
     font-size: 14px;
     font-weight: 600;
     display: inline-block;
 }
+
 .links {
     text-decoration: none;
     color: white;
@@ -395,14 +444,17 @@ img{
     display: block;
     max-width: max-content;
 }
-#like {
+
+.likePath {
+
     cursor: pointer;
+    transition: all 0.8s ease-in-out;
 }
 
 
 
 
-#download{
+#download {
     cursor: pointer;
     display: block;
     margin: auto;
