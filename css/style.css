@@ -127,7 +127,7 @@ img{
     background-color: #28D979;
     border-radius: 3px;
 }
-#russian, #english, #francais {
+#russian, #english, #italian {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
@@ -135,7 +135,7 @@ img{
 #progressBarEnglish {
     width: 50%;
 }
-#progressBarFrancais {
+#progressBarItalian {
     width: 5%;
 }
 

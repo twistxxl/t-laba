@@ -1,0 +1,13 @@
+#containerForInput {
+    position: relative;
+    display: inline-block;
+    
+}
+#containerForInput input:focus {
+    border: 1px solid #28D979;
+    outline: none;
+    border-radius: 15px;
+    padding: 5px 5px 5px 15px;
+    font-size: 150%;
+   transition: all 0.5s ease-in-out;
+}
